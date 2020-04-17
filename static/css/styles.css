@@ -96,6 +96,7 @@ nav ul input {
 
 .flex {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .flex-column {
@@ -159,6 +160,24 @@ p {
     line-height: 1.5em;
 }
 
-.max-width-500 {
+.max-width {
     max-width: 500px;
+}
+
+@media(max-width: 320px) {
+    .max-width {
+        max-width: 240px !important;
+    }
+    .flex>iframe {
+        width: 240px !important;
+    }
+}
+
+@media(max-width: 420px) {
+    .max-width {
+        max-width: 300px;
+    }
+    .flex>iframe {
+        width: 300px !important;
+    }
 }
